@@ -1,0 +1,93 @@
+
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Website Pribadi Saya</title>
+    <link rel="stylesheet" href="style.css"/>
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="container">
+        <h1 class="logo">Website Saya</h1>
+        <ul class="nav-links">
+          <li><a href="beranda.html">Beranda</a></li>
+          <li><a href="tentang.html">Tentang Saya</a></li>
+          <li><a href="pendidikan.html">Pendidikan</a></li>
+          <li><a href="kontak.html">Kontak</a></li>
+        </ul>
+      </div>
+    </nav>
+    <section class="container content" id="pendidikan" data-animate>
+      <h2>Pendidikan</h2>
+      <ul>
+        <li><strong>Sekolah:</strong> smkn 1 blega</li>
+        <li><strong>Kelas:</strong> XI RPL</li>
+        <li><strong>Jurusan:</strong> (RPL) Rekayasa Perangkat Lunak</li>
+        <li>
+          <strong>Pelajaran Favorit:</strong> Desain Grafis, Pemrograman Web 
+        </li>
+      </ul>
+    </section>
+    <!-- bb -->
+     <section class="container content" id="Sekolah" data-animate>
+      <h2>SMKN 1 BLEGA</h2>
+      <p>
+        Saya adalah siswa <i>SMKN 1 BLEGA</i> Saya sekarang kelas <i>XI</i> saya resmi menjadi keluarga smeksaga
+        pada tahun 2023-2024. saya sangat senang sekali menjadi sebagian keluarga besar <i>SMKN 1 blega</i>
+      </p>
+    </section>
+    <!-- bb -->
+     <section class="container content" id="Kelas" data-animate>
+      <h2>XI RPL</h2>
+      <p>
+        Saya adalah siswa Kelas<i> XI rpl</i> waktu kelas <i>X</i> Namanya bukan rpl tetapi <i>(PPLG) pengembangan Perangkat Lunak dan Gim</i>
+      </p>
+    </section>
+    <!-- bb -->
+     <section class="container content" id="Jurusan" data-animate>
+      <h2 class="judul-rpl">
+  <img src="logo.png" alt="Logo" class="logo">
+  RPL
+</h2>
+      <p>
+       RPL merupakan singkatan dari <i>Rekayasa Perangkat Lunak</i>, sebuah jurusan di Sekolah Menengah Kejuruan (SMK) 
+       atau perguruan tinggi yang fokus pada pengembangan software atau perangkat lunak seperti aplikasi web, mobile, dan game. 
+       Jurusan ini mengajarkan prinsip dan teknik merancang, mengembangkan,
+        menganalisis, menguji, dan memelihara perangkat lunak, serta konsep-konsep seperti algoritma,
+         struktur data, dan bahasa pemrograman. 
+      </p>
+    </section>
+    <!-- bb -->
+      <section class="container content" id="Pelajaran Favorit" data-animate>
+      <h2>Pelajaran Favorit</h2>
+      <p>
+       Desain Grafis
+      </p>
+      <p>
+        Pemrograman Website
+      </p>
+    </section>
+    <!-- =====animasi===== -->
+    <script>
+    // Animasi saat scroll
+    const observer = new IntersectionObserver((entries)=>{
+      entries.forEach(entry=>{
+        if(entry.isIntersecting){
+          entry.target.classList.add('in-view');
+        }
+      });
+    },{threshold:0.2});
+
+    document.querySelectorAll('[data-animate]').forEach(el=>{
+      observer.observe(el);
+    });
+  </script>
+    <footer class="footer">
+      <div class="container">
+        <p>&copy; 2025 afgan.semngat belajar coding 💻</p>
+      </div>
+    </footer>
+  </body>
+</html>
